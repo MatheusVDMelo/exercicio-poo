@@ -16,9 +16,21 @@
 //Produto01.ExibirNomeValorProduto();
 //Produto02.ExibirNomeValorProduto();
 
-Pessoa Pessoa01 = new Pessoa()
+
+//Exercício 02
+//
+//Pessoa Pessoa01 = new Pessoa()
+//{
+//    Nome = "Larissa",
+//    Idade = 32
+//};
+//Pessoa01.ExibirNomeIdadePessoa();
+
+//Exercício 02
+
+Aluno Pessoa01 = new Aluno()
 {
     Nome = "Larissa",
-    Idade = 32
+    Nota = 1,
 };
-Pessoa01.ExibirNomeIdadePessoa();
+Pessoa01.VerificaSituacao();
