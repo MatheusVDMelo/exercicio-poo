@@ -76,12 +76,42 @@
 
 //Exercício 05
 //
-Produto produto01 = new Produto() { Nome = "Detergente", Preco = 8 };
-Produto produto02 = new Produto() { Nome = "Água sanitária", Preco = 9 };
-Produto produto03 = new Produto() { Nome = "Sabão em pó", Preco = 18 };
-Produto[] Lista = [produto01, produto02, produto03];
-foreach (Produto Indice in Lista)
+//Produto Produto01 = new Produto() { Nome = "Detergente", Preco = 8 };
+//Produto Produto02 = new Produto() { Nome = "Água sanitária", Preco = 9 };
+//Produto Produto03 = new Produto() { Nome = "Sabão em pó", Preco = 18 };
+//Produto[] Lista = [Produto01, Produto02, Produto03];
+//foreach (Produto Indice in Lista)
+//{
+//    Console.WriteLine($"Produto:{Indice.Nome}, Preco:{Indice.Preco}");
+//}
+//;
+
+//Exercício 06
+//
+Pessoa Buscador = new Pessoa();
+
+Buscador.VerificarNomeLista();
+bool NomeLocalizado = false;
+
+Pessoa Pessoa01 = new Pessoa() { Nome = "Iago" };
+Pessoa Pessoa02 = new Pessoa() { Nome = "Rafaela" };
+Pessoa Pessoa03 = new Pessoa() { Nome = "Marco" };
+Pessoa Pessoa04 = new Pessoa() { Nome = "Amanda" };
+Pessoa[] Lista = [Pessoa01, Pessoa02, Pessoa03, Pessoa04];
+
+foreach (Pessoa Indice in Lista)
 {
-    Console.WriteLine($"Produto:{Indice.Nome}, Preco:{Indice.Preco}");
+    if (Indice.Nome == Buscador.Nome)
+    {
+        NomeLocalizado = true;
+        break;
+    }
 }
-;
+if (NomeLocalizado)
+{
+    Console.WriteLine("Nome na lista");
+}
+else
+{
+    Console.WriteLine("Nome fora da lista");
+};
