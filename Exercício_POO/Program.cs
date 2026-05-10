@@ -88,30 +88,48 @@
 
 //Exercício 06
 //
-Pessoa Buscador = new Pessoa();
+//Pessoa Buscador = new Pessoa();
+//
+//Buscador.VerificarNomeLista();
+//bool NomeLocalizado = false;
+//
+//Pessoa Pessoa01 = new Pessoa() { Nome = "Iago" };
+//Pessoa Pessoa02 = new Pessoa() { Nome = "Rafaela" };
+//Pessoa Pessoa03 = new Pessoa() { Nome = "Marco" };
+//Pessoa Pessoa04 = new Pessoa() { Nome = "Amanda" };
+//Pessoa[] Lista = [Pessoa01, Pessoa02, Pessoa03, Pessoa04];
+//
+//foreach (Pessoa Indice in Lista)
+//{
+//    if (Indice.Nome == Buscador.Nome)
+//    {
+//        NomeLocalizado = true;
+//        break;
+//    }
+//}
+//if (NomeLocalizado)
+//{
+//    Console.WriteLine("Nome na lista");
+//}
+//else
+//{
+//    Console.WriteLine("Nome fora da lista");
+//};
+//Exercício 07
 
-Buscador.VerificarNomeLista();
-bool NomeLocalizado = false;
+Produto Produto01 = new Produto() { Nome = "Detergente", Preco = 18 };
+Produto Produto02 = new Produto() { Nome = "Água sanitária", Preco = 9 };
+Produto Produto03 = new Produto() { Nome = "Sabão em pó", Preco = 5 };
+Produto[] Lista = [Produto01, Produto02, Produto03];
+Produto ItemValorMaisAlto = new Produto();
 
-Pessoa Pessoa01 = new Pessoa() { Nome = "Iago" };
-Pessoa Pessoa02 = new Pessoa() { Nome = "Rafaela" };
-Pessoa Pessoa03 = new Pessoa() { Nome = "Marco" };
-Pessoa Pessoa04 = new Pessoa() { Nome = "Amanda" };
-Pessoa[] Lista = [Pessoa01, Pessoa02, Pessoa03, Pessoa04];
-
-foreach (Pessoa Indice in Lista)
+foreach (Produto Indice in Lista)
 {
-    if (Indice.Nome == Buscador.Nome)
+    if (Indice.Preco > ItemValorMaisAlto.Preco) 
     {
-        NomeLocalizado = true;
-        break;
+        ItemValorMaisAlto.Nome = Indice.Nome;
+        ItemValorMaisAlto.Preco = Indice.Preco;
     }
 }
-if (NomeLocalizado)
-{
-    Console.WriteLine("Nome na lista");
-}
-else
-{
-    Console.WriteLine("Nome fora da lista");
-};
+Console.WriteLine($"O item com maior preço é {ItemValorMaisAlto.Nome} com valor de {ItemValorMaisAlto.Preco} reais");
+;
