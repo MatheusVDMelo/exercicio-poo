@@ -31,6 +31,10 @@ namespace exercicioPoo
                 Console.WriteLine($"Saldo isuficiente, saldo atual: {Saldo}");
             }
         }
+        public void ConsultarSaldo() 
+        {
+            Console.WriteLine($"Seu atual: {Saldo}");
+        }
 
     }
 }
